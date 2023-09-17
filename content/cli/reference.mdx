@@ -72,7 +72,7 @@ depot bake -f docker-bake.hcl original
 | `lint-fail-on` | Set the lint severity that fails the build ("info", "warn", "error", "none") (default "error") |
 | `load` | Shorthand for "--set=\*.output=type=docker" |
 | `metadata-file` | Write build result metadata to the file |
-| `no-cache` | Do not use cache when building the image |
+| `no-cache` | Do not use previous cache when building the image |
 | `print` | Print the options without building |
 | `progress` | Set type of progress output ("auto", "plain", "tty"). Use plain to show container output (default "auto") |
 | `project` | Depot project ID |
@@ -143,7 +143,7 @@ depot build -t repo/image:tag . --push
 | `load` | Shorthand for "--output=type=docker" |
 | `metadata-file` | Write build result metadata to the file |
 | `network` | Set the networking mode for the "RUN" instructions during build (default "default") |
-| `no-cache` | Do not use cache when building the image |
+| `no-cache` | Do not use previous cache when building the image |
 | `no-cache-filter` | Do not cache specified stages |
 | `output` | Output destination (format: "type=local,dest=path") |
 | `platform` | Set target platform for build |
